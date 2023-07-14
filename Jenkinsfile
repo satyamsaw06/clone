@@ -1,7 +1,11 @@
 pipeline{
 		agent{
-			
+			label{
 				label "built-in"
+				customWorkspace "/mnt/firstassognment"
+			}
+		
+				
 				
 			
 		}
@@ -10,7 +14,7 @@ pipeline{
 				stage("indexfile"){
 					steps{
 							
-							sh  "mv AssignNO-1/index.file var/www/html/"
+							sh  "mv /mnt/firstassognment/index.file var/www/html/"
 							sh "chmod -R 777 var/www/html/index.html"
 						}
 				}
