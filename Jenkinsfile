@@ -15,7 +15,7 @@ pipeline{
 					steps{
 							
 							sh  "mv /mnt/firstassognment/index.html /var/www/html/"
-							sh "chmod -R 777 var/www/html/index.html"
+							sh "chmod -R 777 /var/www/html/index.html"
 						}
 				}
 				
