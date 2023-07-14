@@ -9,8 +9,8 @@ pipeline{
 			stages{
 				stage("indexfile"){
 					steps{
-						chmod -R var/www/html/index.html
-						mv /mnt/firstassignmentofJenkinsfile/index.file var/www/html/
+							sh "chmod -R var/www/html/index.html"
+							sh  "mv /mnt/firstassignmentofJenkinsfile/index.file var/www/html/"
 						}
 				}
 				
