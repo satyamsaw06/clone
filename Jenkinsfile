@@ -8,7 +8,9 @@ pipeline{
       stages{
             stage("1st"){
               steps{
-                sh "cat index.html"
+                cleanWs()
+                sh "docker cp index.html affectionate_clarke:/usr/local/apache2/htdocs"
+                
               }
             }
       }
