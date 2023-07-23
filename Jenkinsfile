@@ -1,9 +1,12 @@
 pipeline{
-  agent any 
+  agent {
+    label "built-in"
+    Workspace "/mnt/contain"
+  } 
       stages{
             stage("1st"){
               steps{
-                sh "mv index.html /mnt"
+                sh "cat index.html"
               }
             }
       }
